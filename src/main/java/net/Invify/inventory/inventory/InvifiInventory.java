@@ -123,11 +123,6 @@ public abstract class InvifiInventory {
      * @param player The player who will see the inventory.
      */
     public void openInventory(Player player) {
-        // Check if the required plugin is installed
-        if (InvifyAPI.getInstance().getServer().getPluginManager().getPlugin("invifi-lib") == null) {
-            player.kick(AdventureUtil.colorize("<red>Invifi-Lib not found!"));
-        }
-
         // Open the inventory for the player
         player.openInventory(inventory);
 

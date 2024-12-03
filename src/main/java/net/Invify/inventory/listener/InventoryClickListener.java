@@ -33,7 +33,7 @@ public final class InventoryClickListener implements Listener {
         ItemClickEvent itemClickEvent = new ItemClickEvent(gui, player, event.getCurrentItem(), event.getClick(), event.getSlot());
         item.onClick(itemClickEvent);
 
-        event.setCancelled(itemClickEvent.isWillCancelEvent());
+        event.setCancelled(itemClickEvent.isWillCancelEvent() && item.isCancelClickEvent());
         if (itemClickEvent.isWillUpdate()) {
             gui.updateInventory();
         } else if (itemClickEvent.isWillClose()) {

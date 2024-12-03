@@ -7,6 +7,7 @@ public abstract class CustomItem {
 
     // The ItemStack representing this custom item.
     private final ItemStack itemStack;
+    private boolean cancelClickEvent = true;
 
     protected CustomItem(ItemStack itemStack) {
         this.itemStack = itemStack;
@@ -20,6 +21,14 @@ public abstract class CustomItem {
      */
     public void onClick(ItemClickEvent event) {
         // Default implementation is empty, can be overridden by subclasses.
+    }
+
+    public boolean isCancelClickEvent() {
+        return cancelClickEvent;
+    }
+
+    public void setCancelClickEvent(boolean cancelClickEvent) {
+        this.cancelClickEvent = cancelClickEvent;
     }
 
     public ItemStack getItemStack() {
