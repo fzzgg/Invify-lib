@@ -74,6 +74,7 @@ Report issues on the GitHub repository
 Contact developer on Discord: fzzgg
 
 📜 License
+
 This project is licensed under the MIT License. This means that you are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, as well as to permit persons to whom the software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
