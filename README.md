@@ -15,7 +15,7 @@ It requires ```Java 17``` to run.
 
 How to Integrate INVIFY INVENTORY API into Your Project
 
-## 🔴 Maven Integration
+## 🔵 Maven Integration
 
 If you're using Maven, add the following to your pom.xml:
 
