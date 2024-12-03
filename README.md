@@ -15,6 +15,8 @@ InvifyLib is a powerful and feature-rich library designed for developers (for no
 
 How to Integrate INVIFY INVENTORY API into Your Project
 
+### ❗️REPLACE ```{VERSION}``` WITH THE LATEST RELEASE VERSION
+
 ## 🔵 Maven Integration
 
 If you're using Maven, add the following to your pom.xml:
