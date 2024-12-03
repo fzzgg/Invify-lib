@@ -9,7 +9,7 @@ The library is only compatible with Minecraft versions ```1.17.1``` to ```1.21``
 
 It requires ```Java 17``` to run.
 
-🛠️ The library is still in development. If you encounter any issues or have feature requests, feel free to contact me on Discord: fzzgg.
+### 🛠️ ```The library is still in development. If you encounter any issues or have feature requests, feel free to contact me on Discord: fzzgg.```
 
 ## 👷 Developer API
 
