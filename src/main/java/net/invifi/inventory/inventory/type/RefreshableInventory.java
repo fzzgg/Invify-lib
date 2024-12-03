@@ -1,6 +1,6 @@
 package net.invifi.inventory.inventory.type;
 
-import net.invifi.inventory.InvifiAPI;
+import net.invifi.inventory.InvifyAPI;
 import net.invifi.inventory.api.item.CustomItem;
 import net.invifi.inventory.api.size.InvifiInventorySize;
 import net.invifi.inventory.inventory.InvifiInventory;
@@ -10,7 +10,7 @@ import org.bukkit.scheduler.BukkitTask;
 
 import java.util.concurrent.TimeUnit;
 
-public abstract class RefreshableInventory<T extends InvifiAPI> extends InvifiInventory {
+public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifiInventory {
 
     // The plugin instance that will be used to run tasks
     protected final T plugin;

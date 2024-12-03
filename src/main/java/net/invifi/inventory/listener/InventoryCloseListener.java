@@ -1,6 +1,6 @@
 package net.invifi.inventory.listener;
 
-import net.invifi.inventory.InvifiAPI;
+import net.invifi.inventory.InvifyAPI;
 import net.invifi.inventory.inventory.InvifiInventory;
 import net.invifi.inventory.inventory.InvifiInventoryHolder;
 import org.bukkit.entity.Player;
@@ -18,7 +18,7 @@ public final class InventoryCloseListener implements Listener {
         if (!(event.getPlayer() instanceof Player player) || !(event.getInventory().getHolder() instanceof InvifiInventoryHolder guiHolder)) return;
 
         InvifiInventory gameHostGui = guiHolder.getInvifiInventory();
-        Set<UUID> viewers = InvifiAPI.getInstance().getOpenedInventories().get(gameHostGui);
+        Set<UUID> viewers = InvifyAPI.getInstance().getOpenedInventories().get(gameHostGui);
         if (viewers == null) return;
 
         viewers.remove(player.getUniqueId());

@@ -1,6 +1,6 @@
 package net.invifi.inventory.inventory;
 
-import net.invifi.inventory.InvifiAPI;
+import net.invifi.inventory.InvifyAPI;
 import net.invifi.inventory.api.info.InventoryInfo;
 import net.invifi.inventory.api.item.CustomItem;
 import net.invifi.inventory.api.size.InvifiInventorySize;
@@ -124,7 +124,7 @@ public abstract class InvifiInventory {
      */
     public void openInventory(Player player) {
         // Check if the required plugin is installed
-        if (InvifiAPI.getInstance().getServer().getPluginManager().getPlugin("invifi-lib") == null) {
+        if (InvifyAPI.getInstance().getServer().getPluginManager().getPlugin("invifi-lib") == null) {
             player.kick(AdventureUtil.colorize("<red>Invifi-Lib not found!"));
         }
 
@@ -132,7 +132,7 @@ public abstract class InvifiInventory {
         player.openInventory(inventory);
 
         // Add the player to the list of players who have this inventory open
-        InvifiAPI.getInstance().getOpenedInventories().computeIfAbsent(this, gui -> new HashSet<>())
+        InvifyAPI.getInstance().getOpenedInventories().computeIfAbsent(this, gui -> new HashSet<>())
                 .add(player.getUniqueId());
     }
 
@@ -152,7 +152,7 @@ public abstract class InvifiInventory {
      * @return True if the player is viewing this inventory, false otherwise.
      */
     public boolean isViewing(Player player) {
-        return InvifiAPI.getInstance().getOpenedInventories().computeIfAbsent(this, gui -> new HashSet<>())
+        return InvifyAPI.getInstance().getOpenedInventories().computeIfAbsent(this, gui -> new HashSet<>())
                 .contains(player.getUniqueId());
     }
 

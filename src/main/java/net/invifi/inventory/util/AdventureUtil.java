@@ -1,6 +1,6 @@
 package net.invifi.inventory.util;
 
-import net.invifi.inventory.InvifiAPI;
+import net.invifi.inventory.InvifyAPI;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
@@ -26,7 +26,7 @@ public final class AdventureUtil {
      * @return A Component representing the colorized text.
      */
     public static Component colorize(String text) {
-        return InvifiAPI.getInstance().getMinimessage().deserialize(text);
+        return InvifyAPI.getInstance().getMinimessage().deserialize(text);
     }
 
     /**

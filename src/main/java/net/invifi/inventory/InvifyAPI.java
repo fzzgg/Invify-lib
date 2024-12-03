@@ -19,15 +19,15 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
-public final class InvifiAPI extends JavaPlugin {
+public final class InvifyAPI extends JavaPlugin {
 
-    public static InvifiAPI instance; // Singleton instance of the plugin
+    public static InvifyAPI instance; // Singleton instance of the plugin
 
     private Map<InvifiInventory, Set<UUID>> openedInventories; // Maps inventories to the list of players that have them opened
 
     private MiniMessage minimessage; // Minimessage instance for handling text components
 
-    public static InvifiAPI getInstance() {
+    public static InvifyAPI getInstance() {
         return instance;
     }
 
