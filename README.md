@@ -5,43 +5,63 @@ Welcome to the INVIFY GUI API! 🚀
 
 👷 Developer API
 How to Integrate INVIFY GUI API into Your Project
+
 Maven Integration
+
 If you're using Maven, add the following to your pom.xml:
-xmlCopy<repositories>
+
+```xml
+<repositories>
     <repository>
         <id>jitpack.io</id>
         <url>https://jitpack.io</url>
     </repository>
 </repositories>
 
+```
+
+```xml
 <dependencies>
     <dependency>
         <groupId>com.github.fzzgg</groupId>
         <artifactId>Invify-lib</artifactId>
-        <version>1.0</version>
+        <version>{VERSION}</version>
     </dependency>
 </dependencies>
+
+```
+
 Gradle Integration
+
 For Gradle projects, include the following in your build.gradle file:
-groovyCopy// Add Jitpack repository
+
+```
 repositories {
     maven { url 'https://jitpack.io' }
 }
 
-// Add dependency
+```
+```
 dependencies {
-    implementation 'com.github.fzzgg:Invify-lib:1.0'
+    implementation 'com.github.fzzgg:Invify-lib:{VERSION}'
 }
+
+```
+
 If you're using Kotlin DSL (build.gradle.kts), use this configuration:
-kotlinCopy// Add Jitpack repository
+
+```
 repositories {
     maven("https://jitpack.io")
 }
+```
 
-// Add dependency
+```
 dependencies {
-    implementation("com.github.fzzgg:Invify-lib:1.0")
+    implementation("com.github.fzzgg:Invify-lib:{VERSION}")
 }
+
+```
 Quick Start Guide
 
 Add the Dependency: Follow the Maven or Gradle instructions above.
