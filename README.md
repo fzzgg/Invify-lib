@@ -5,9 +5,9 @@ InvifyLib is a powerful and feature-rich library designed for developers to crea
 
 ## ⚠️ Important Compatibility Information
 
-### The library is only compatible with Minecraft versions ```1.17.1``` to ```1.21```.
+### 📖 The library is only compatible with Minecraft versions ```1.17.1``` to ```1.21```.
 
-### It requires ```Java 17` or later version`` to run.
+### ♨️ It requires ```Java 17` or later version`` to run.
 
 ### 🛠️ ```The library is still in development. If you encounter any issues or have feature requests, feel free to contact me on Discord: fzzgg.```
 
