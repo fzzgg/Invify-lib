@@ -1,14 +1,21 @@
-Welcome to the INVIFY INVENTORY API! 🚀
 
-‼️ IMPORTANT
+# Welcome to the INVIFY INVENTORY API! 🚀**</span>
+
+InvifyLib is a powerful and feature-rich library designed for developers to create custom GUIs with ease. (In the future :D)
+
+## ⚠️ Important Compatibility Information
+
+The library is only compatible with Minecraft versions ```1.17.1``` to ```1.21```.
+
+It requires ```Java 17``` to run.
 
 🛠️ The library is still in development. If you encounter any issues or have feature requests, feel free to contact me on Discord: fzzgg.
 
-👷 Developer API
+## 👷 Developer API
 
 How to Integrate INVIFY INVENTORY API into Your Project
 
-🔴 Maven Integration
+## 🔴 Maven Integration
 
 If you're using Maven, add the following to your pom.xml:
 
@@ -33,7 +40,7 @@ If you're using Maven, add the following to your pom.xml:
 
 ```
 
-🟢 Gradle Integration
+## 🟢 Gradle Integration
 
 For Gradle projects, include the following in your build.gradle file:
 
@@ -50,7 +57,7 @@ dependencies {
 
 ```
 
-🟣 If you're using Kotlin DSL (build.gradle.kts), use this configuration:
+## 🟣 If you're using Kotlin DSL (build.gradle.kts), use this configuration:
 
 ```
 repositories {
@@ -64,18 +71,18 @@ dependencies {
 }
 
 ```
-💻 Quick Start Guide
+## 💻 Quick Start Guide
 
 Add the Dependency: Follow the Maven or Gradle instructions above.
 Import the Library: In your Java/Kotlin code, import the necessary classes.
 Start Using INVIFY INVENTORY API: Begin implementing your project features.
 
-🤝 Contributing
+## 🤝 Contributing
 
 Report issues on the GitHub repository
 Contact developer on Discord: fzzgg
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License. This means that you are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, as well as to permit persons to whom the software is furnished to do so, subject to the following conditions:
 
