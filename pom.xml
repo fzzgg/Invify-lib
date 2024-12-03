@@ -6,7 +6,7 @@
 
     <groupId>net.invifi</groupId>
     <artifactId>Invify-lib</artifactId>
-    <version>1.0</version>
+    <version>v1.0.0</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.21.3-R0.1-SNAPSHOT</version>
+            <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
