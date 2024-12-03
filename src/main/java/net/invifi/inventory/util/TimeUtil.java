@@ -8,11 +8,8 @@ public final class TimeUtil {
     }
 
     public static int toTicks(long time, TimeUnit unit) {
-        if (time == 0L) {
-            return 0;
-        }
+        return time == 0L ? 0 : (int) (unit.toMillis(time) / 50L);
 
-        return (int) (unit.toMillis(time) / 50L);
     }
 
 }

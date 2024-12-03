@@ -11,8 +11,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 
-import java.util.Objects;
-
 public final class InventoryClickListener implements Listener {
 
     @EventHandler
@@ -24,7 +22,7 @@ public final class InventoryClickListener implements Listener {
         CustomItem item = gui.getItem(event.getRawSlot());
 
         if ((inventory.getType() != InventoryType.CHEST || (event.getRawSlot() < 0
-                || event.getRawSlot() >= gui.getInventory().getSize())) && Objects.nonNull(item)) return;
+                || event.getRawSlot() >= gui.getInventory().getSize())) && item == null) return;
 
         if (item == null) {
             if (!event.isCancelled()) event.setCancelled(gui.isCancelClickEvent());
