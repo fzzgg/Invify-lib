@@ -68,7 +68,7 @@ Quick Start Guide
 
 Add the Dependency: Follow the Maven or Gradle instructions above.
 Import the Library: In your Java/Kotlin code, import the necessary classes.
-Start Using INVIFY GUI API: Begin implementing your project features.
+Start Using INVIFY INVENTORY API: Begin implementing your project features.
 
 🤝 Contributing
 
