@@ -1,10 +1,11 @@
-Welcome to the INVIFY GUI API! 🚀
+Welcome to the INVIFY INVENTORY API! 🚀
 
 ‼️ IMPORTANT
 🛠️ The library is still in development. If you encounter any issues or have feature requests, feel free to contact me on Discord: fzzgg.
 
 👷 Developer API
-How to Integrate INVIFY GUI API into Your Project
+
+How to Integrate INVIFY INVENTORY API into Your Project
 
 Maven Integration
 
