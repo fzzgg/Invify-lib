@@ -1,7 +1,7 @@
 
 # Welcome to the INVIFY INVENTORY API! 🧰
 
-InvifyLib is a powerful and feature-rich library designed for developers to create custom GUIs with ease. (In the future :D)
+InvifyLib is a powerful and feature-rich library designed for developers (for now) to create custom GUIs with ease. (In the future :D)
 
 ## ⚠️ Important Compatibility Information
 
