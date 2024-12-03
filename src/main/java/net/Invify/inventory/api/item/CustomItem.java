@@ -1,6 +1,6 @@
-package net.invifi.inventory.api.item;
+package net.Invify.inventory.api.item;
 
-import net.invifi.inventory.api.event.ItemClickEvent;
+import net.Invify.inventory.api.event.ItemClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 public abstract class CustomItem {

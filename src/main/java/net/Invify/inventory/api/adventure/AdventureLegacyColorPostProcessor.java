@@ -1,6 +1,6 @@
-package net.invifi.inventory.api.adventure;
+package net.Invify.inventory.api.adventure;
 
-import net.invifi.inventory.util.AdventureUtil;
+import net.Invify.inventory.util.AdventureUtil;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextReplacementConfig;
 

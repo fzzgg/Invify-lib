@@ -1,4 +1,4 @@
-main: net.invifi.inventory.InvifyAPI
+main: net.Invify.inventory.InvifyAPI
 version: 1.0
 name: invify-lib
 author: fzzgg

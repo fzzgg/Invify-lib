@@ -1,4 +1,4 @@
-package net.invifi.inventory.inventory;
+package net.Invify.inventory.inventory;
 
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;

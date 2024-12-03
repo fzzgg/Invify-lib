@@ -1,6 +1,6 @@
-package net.invifi.inventory.api.info;
+package net.Invify.inventory.api.info;
 
-import net.invifi.inventory.api.size.InvifiInventorySize;
+import net.Invify.inventory.api.size.InvifiInventorySize;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

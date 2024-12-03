@@ -1,6 +1,6 @@
-package net.invifi.inventory.api.event;
+package net.Invify.inventory.api.event;
 
-import net.invifi.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.inventory.InvifiInventory;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;

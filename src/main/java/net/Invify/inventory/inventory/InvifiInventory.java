@@ -1,10 +1,10 @@
-package net.invifi.inventory.inventory;
+package net.Invify.inventory.inventory;
 
-import net.invifi.inventory.InvifyAPI;
-import net.invifi.inventory.api.info.InventoryInfo;
-import net.invifi.inventory.api.item.CustomItem;
-import net.invifi.inventory.api.size.InvifiInventorySize;
-import net.invifi.inventory.util.AdventureUtil;
+import net.Invify.inventory.InvifyAPI;
+import net.Invify.inventory.api.info.InventoryInfo;
+import net.Invify.inventory.api.item.CustomItem;
+import net.Invify.inventory.api.size.InvifiInventorySize;
+import net.Invify.inventory.util.AdventureUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;

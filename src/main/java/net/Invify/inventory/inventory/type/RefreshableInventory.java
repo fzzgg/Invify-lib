@@ -1,9 +1,9 @@
-package net.invifi.inventory.inventory.type;
+package net.Invify.inventory.inventory.type;
 
-import net.invifi.inventory.InvifyAPI;
-import net.invifi.inventory.api.item.CustomItem;
-import net.invifi.inventory.api.size.InvifiInventorySize;
-import net.invifi.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.InvifyAPI;
+import net.Invify.inventory.api.item.CustomItem;
+import net.Invify.inventory.api.size.InvifiInventorySize;
+import net.Invify.inventory.inventory.InvifiInventory;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.scheduler.BukkitTask;

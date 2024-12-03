@@ -1,4 +1,4 @@
-package net.invifi.inventory.api.adventure;
+package net.Invify.inventory.api.adventure;
 
 import java.util.function.UnaryOperator;
 

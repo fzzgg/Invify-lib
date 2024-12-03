@@ -1,11 +1,11 @@
-package net.invifi.inventory;
+package net.Invify.inventory;
 
-import net.invifi.inventory.api.adventure.AdventureLegacyColorPostProcessor;
-import net.invifi.inventory.api.adventure.AdventureLegacyColorPreProcessor;
-import net.invifi.inventory.inventory.InvifiInventory;
-import net.invifi.inventory.listener.InventoryClickListener;
-import net.invifi.inventory.listener.InventoryCloseListener;
-import net.invifi.inventory.util.TimeUtil;
+import net.Invify.inventory.api.adventure.AdventureLegacyColorPostProcessor;
+import net.Invify.inventory.api.adventure.AdventureLegacyColorPreProcessor;
+import net.Invify.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.listener.InventoryClickListener;
+import net.Invify.inventory.listener.InventoryCloseListener;
+import net.Invify.inventory.util.TimeUtil;
 import net.kyori.adventure.text.format.TextDecoration;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;

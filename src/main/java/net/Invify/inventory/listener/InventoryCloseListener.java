@@ -1,8 +1,8 @@
-package net.invifi.inventory.listener;
+package net.Invify.inventory.listener;
 
-import net.invifi.inventory.InvifyAPI;
-import net.invifi.inventory.inventory.InvifiInventory;
-import net.invifi.inventory.inventory.InvifiInventoryHolder;
+import net.Invify.inventory.InvifyAPI;
+import net.Invify.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.inventory.InvifiInventoryHolder;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

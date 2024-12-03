@@ -1,6 +1,6 @@
-package net.invifi.inventory.util;
+package net.Invify.inventory.util;
 
-import net.invifi.inventory.InvifyAPI;
+import net.Invify.inventory.InvifyAPI;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;

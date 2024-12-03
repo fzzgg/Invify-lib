@@ -1,4 +1,4 @@
-package net.invifi.inventory.util;
+package net.Invify.inventory.util;
 
 import java.util.concurrent.TimeUnit;
 

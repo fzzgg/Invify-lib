@@ -1,4 +1,4 @@
-package net.invifi.inventory.api.size;
+package net.Invify.inventory.api.size;
 
 /**
  * Enum representing different predefined inventory sizes.
