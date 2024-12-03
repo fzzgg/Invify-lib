@@ -8,7 +8,7 @@ Welcome to the INVIFY INVENTORY API! 🚀
 
 How to Integrate INVIFY INVENTORY API into Your Project
 
-Maven Integration
+🔴 Maven Integration
 
 If you're using Maven, add the following to your pom.xml:
 
@@ -33,7 +33,7 @@ If you're using Maven, add the following to your pom.xml:
 
 ```
 
-Gradle Integration
+🟢 Gradle Integration
 
 For Gradle projects, include the following in your build.gradle file:
 
@@ -50,7 +50,7 @@ dependencies {
 
 ```
 
-If you're using Kotlin DSL (build.gradle.kts), use this configuration:
+🟣 If you're using Kotlin DSL (build.gradle.kts), use this configuration:
 
 ```
 repositories {
