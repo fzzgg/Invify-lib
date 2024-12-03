@@ -1,5 +1,5 @@
 
-# Welcome to the INVIFY INVENTORY API! 🚀
+# Welcome to the INVIFY INVENTORY API! 🧰
 
 InvifyLib is a powerful and feature-rich library designed for developers to create custom GUIs with ease. (In the future :D)
 
