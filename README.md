@@ -64,7 +64,7 @@ dependencies {
 }
 
 ```
-Quick Start Guide
+💻 Quick Start Guide
 
 Add the Dependency: Follow the Maven or Gradle instructions above.
 Import the Library: In your Java/Kotlin code, import the necessary classes.
