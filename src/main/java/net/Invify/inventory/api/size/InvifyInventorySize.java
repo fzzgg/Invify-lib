@@ -5,7 +5,7 @@ package net.Invify.inventory.api.size;
  * Each size corresponds to a different number of slots and some may include specific colored border slots.
  */
 
-public enum InvifiInventorySize {
+public enum InvifyInventorySize {
 
     // Different inventory sizes with a name, total slot count, and specific border slots.
     ONE_LINE("ONE_LINE", 9, new int[0]), // 9 slots (1 row)
@@ -23,7 +23,7 @@ public enum InvifiInventorySize {
 
     // An array representing the border slots that might be used for decoration or special purpose.
 
-    InvifiInventorySize(String name, int size, int[] coloredBorderSlots) {
+    InvifyInventorySize(String name, int size, int[] coloredBorderSlots) {
         this.name = name;
         this.size = size;
 
@@ -35,7 +35,7 @@ public enum InvifiInventorySize {
      * @param slots The number of slots to fit.
      * @return The closest inventory size based on the provided number of slots.
      */
-    public static InvifiInventorySize fit(int slots) {
+    public static InvifyInventorySize fit(int slots) {
         if (slots < 10) {
             return ONE_LINE; // Return ONE_LINE if there are fewer than 10 slots.
         } else if (slots < 19) {
@@ -57,10 +57,10 @@ public enum InvifiInventorySize {
      * @param name The name of the inventory size (e.g., "ONE_LINE").
      * @return The corresponding inventory size or null if not found.
      */
-    public static InvifiInventorySize of(String name) {
-        for (InvifiInventorySize invifiInventorySize : values()) {
-            if (invifiInventorySize.name.equals(name)) {
-                return invifiInventorySize; // Return the matching inventory size.
+    public static InvifyInventorySize of(String name) {
+        for (InvifyInventorySize invifyInventorySize : values()) {
+            if (invifyInventorySize.name.equals(name)) {
+                return invifyInventorySize; // Return the matching inventory size.
             }
         }
         return null; // Return null if no matching size is found.

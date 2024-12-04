@@ -2,15 +2,15 @@ package net.Invify.inventory.inventory.type;
 
 import net.Invify.inventory.InvifyAPI;
 import net.Invify.inventory.api.item.CustomItem;
-import net.Invify.inventory.api.size.InvifiInventorySize;
-import net.Invify.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.api.size.InvifyInventorySize;
+import net.Invify.inventory.inventory.InvifyInventory;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.scheduler.BukkitTask;
 
 import java.util.concurrent.TimeUnit;
 
-public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifiInventory {
+public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifyInventory {
 
     // The plugin instance that will be used to run tasks
     protected final T plugin;
@@ -41,7 +41,7 @@ public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifiIn
      * @param size        The size of the inventory
      * @param delay       The delay between inventory updates in milliseconds
      */
-    public RefreshableInventory(T plugin, String displayName, InvifiInventorySize size, long delay) {
+    public RefreshableInventory(T plugin, String displayName, InvifyInventorySize size, long delay) {
         super(size, displayName);
         this.plugin = plugin;
         this.delay = delay;
@@ -111,7 +111,7 @@ public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifiIn
     }
 
     @Override
-    public InvifiInventorySize getInvifiInventorySize() {
+    public InvifyInventorySize getInvifiInventorySize() {
         return super.getInvifiInventorySize();
     }
 

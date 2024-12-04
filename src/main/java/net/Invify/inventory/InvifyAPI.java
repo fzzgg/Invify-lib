@@ -2,7 +2,7 @@ package net.Invify.inventory;
 
 import net.Invify.inventory.api.adventure.AdventureLegacyColorPostProcessor;
 import net.Invify.inventory.api.adventure.AdventureLegacyColorPreProcessor;
-import net.Invify.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.inventory.InvifyInventory;
 import net.Invify.inventory.listener.InventoryClickListener;
 import net.Invify.inventory.listener.InventoryCloseListener;
 import net.Invify.inventory.util.TimeUtil;
@@ -23,7 +23,7 @@ public final class InvifyAPI extends JavaPlugin {
 
     public static InvifyAPI instance; // Singleton instance of the plugin
 
-    private Map<InvifiInventory, Set<UUID>> openedInventories; // Maps inventories to the list of players that have them opened
+    private Map<InvifyInventory, Set<UUID>> openedInventories; // Maps inventories to the list of players that have them opened
 
     private MiniMessage minimessage; // Minimessage instance for handling text components
 
@@ -165,7 +165,7 @@ public final class InvifyAPI extends JavaPlugin {
         }
     }
 
-    public Map<InvifiInventory, Set<UUID>> getOpenedInventories() {
+    public Map<InvifyInventory, Set<UUID>> getOpenedInventories() {
         return openedInventories;
     }
 

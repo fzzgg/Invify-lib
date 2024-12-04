@@ -1,6 +1,6 @@
 package net.Invify.inventory.api.info;
 
-import net.Invify.inventory.api.size.InvifiInventorySize;
+import net.Invify.inventory.api.size.InvifyInventorySize;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -20,7 +20,7 @@ public @interface InventoryInfo {
      * Specifies the size of the inventory.
      * Default is `InvifiInventorySize.THREE_LINE`, which corresponds to a 27-slot inventory.
      */
-    InvifiInventorySize size() default InvifiInventorySize.THREE_LINE;
+    InvifyInventorySize size() default InvifyInventorySize.THREE_LINE;
 
     /**
      * Specifies the display name of the inventory.

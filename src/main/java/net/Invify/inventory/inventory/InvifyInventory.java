@@ -3,7 +3,7 @@ package net.Invify.inventory.inventory;
 import net.Invify.inventory.InvifyAPI;
 import net.Invify.inventory.api.info.InventoryInfo;
 import net.Invify.inventory.api.item.CustomItem;
-import net.Invify.inventory.api.size.InvifiInventorySize;
+import net.Invify.inventory.api.size.InvifyInventorySize;
 import net.Invify.inventory.util.AdventureUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -13,11 +13,11 @@ import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.IntStream;
 
-public abstract class InvifiInventory {
+public abstract class InvifyInventory {
 
     private final Inventory inventory;
 
-    private final InvifiInventorySize invifiInventorySize;
+    private final InvifyInventorySize invifyInventorySize;
 
     /*
         Variable to control whether clicking in the inventory should be canceled
@@ -26,31 +26,31 @@ public abstract class InvifiInventory {
 
     private CustomItem[] items;
 
-    public InvifiInventory() {
+    public InvifyInventory() {
         InventoryInfo inventoryInfo = getClass().getAnnotation(InventoryInfo.class);
         if (inventoryInfo == null) {
             throw new IllegalArgumentException("Inventory \"" + getClass().getName() + "\" is not annotated with @InventoryInfo");
         }
 
         // Create the inventory based on the size and name provided in the annotation
-        this.inventory = Bukkit.createInventory(new InvifiInventoryHolder(this), inventoryInfo.size().getSize(), AdventureUtil.colorize(inventoryInfo.displayName()
+        this.inventory = Bukkit.createInventory(new InvifyInventoryHolder(this), inventoryInfo.size().getSize(), AdventureUtil.colorize(inventoryInfo.displayName()
                 .replace(">>", "»")
                 .replace("<<", "«")));
 
-        this.invifiInventorySize = inventoryInfo.size();
+        this.invifyInventorySize = inventoryInfo.size();
         this.cancelClickEvent = inventoryInfo.cancelClickEvent();
 
         this.items = new CustomItem[inventoryInfo.size().getSize()];
     }
 
-    public InvifiInventory(InvifiInventorySize invifiInventorySize, String displayName) {
+    public InvifyInventory(InvifyInventorySize invifyInventorySize, String displayName) {
         // Create the inventory with custom size and display name
-        this.inventory = Bukkit.createInventory(new InvifiInventoryHolder(this), invifiInventorySize.getSize(), AdventureUtil.colorize(displayName
+        this.inventory = Bukkit.createInventory(new InvifyInventoryHolder(this), invifyInventorySize.getSize(), AdventureUtil.colorize(displayName
                 .replace(">>", "»")
                 .replace("<<", "«")));
 
-        this.items = new CustomItem[invifiInventorySize.getSize()];
-        this.invifiInventorySize = invifiInventorySize;
+        this.items = new CustomItem[invifyInventorySize.getSize()];
+        this.invifyInventorySize = invifyInventorySize;
 
         InventoryInfo inventoryInfo = getClass().getAnnotation(InventoryInfo.class);
         if (inventoryInfo != null) {
@@ -65,7 +65,7 @@ public abstract class InvifiInventory {
      */
     public void clear() {
         this.inventory.clear();
-        this.items = new CustomItem[this.invifiInventorySize.getSize()];
+        this.items = new CustomItem[this.invifyInventorySize.getSize()];
     }
 
     /*
@@ -163,7 +163,7 @@ public abstract class InvifiInventory {
         return inventory;
     }
 
-    public InvifiInventorySize getInvifiInventorySize() {
-        return invifiInventorySize;
+    public InvifyInventorySize getInvifiInventorySize() {
+        return invifyInventorySize;
     }
 }

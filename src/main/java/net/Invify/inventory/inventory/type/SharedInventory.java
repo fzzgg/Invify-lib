@@ -1,8 +1,8 @@
 package net.Invify.inventory.inventory.type;
 
 import net.Invify.inventory.api.item.CustomItem;
-import net.Invify.inventory.api.size.InvifiInventorySize;
-import net.Invify.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.api.size.InvifyInventorySize;
+import net.Invify.inventory.inventory.InvifyInventory;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public abstract class SharedInventory extends InvifiInventory {
+public abstract class SharedInventory extends InvifyInventory {
 
     // A set of all players who have this GUI open
     private final Set<Player> openPlayers;
@@ -21,7 +21,7 @@ public abstract class SharedInventory extends InvifiInventory {
     // An array of locks for synchronizing access to slots
     private final Lock[] slotLocks;
 
-    public SharedInventory(String displayName, InvifiInventorySize size) {
+    public SharedInventory(String displayName, InvifyInventorySize size) {
         super(size, displayName);
         this.openPlayers = new HashSet<>();
         this.inventory = this.getInventory();
@@ -123,7 +123,7 @@ public abstract class SharedInventory extends InvifiInventory {
     }
 
     @Override
-    public InvifiInventorySize getInvifiInventorySize() {
+    public InvifyInventorySize getInvifiInventorySize() {
         return super.getInvifiInventorySize();
     }
 

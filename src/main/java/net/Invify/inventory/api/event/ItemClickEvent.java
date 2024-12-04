@@ -1,13 +1,13 @@
 package net.Invify.inventory.api.event;
 
-import net.Invify.inventory.inventory.InvifiInventory;
+import net.Invify.inventory.inventory.InvifyInventory;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
 public final class ItemClickEvent {
 
-    private final InvifiInventory inventory;
+    private final InvifyInventory inventory;
     private final Player player;
     private final ItemStack itemStack;
     private final ClickType clickType;
@@ -17,7 +17,7 @@ public final class ItemClickEvent {
     private boolean willUpdate = true;
     private boolean willClose = false;
 
-    public ItemClickEvent(InvifiInventory inventory, Player player, ItemStack itemStack, ClickType clickType, int slot) {
+    public ItemClickEvent(InvifyInventory inventory, Player player, ItemStack itemStack, ClickType clickType, int slot) {
         this.inventory = inventory;
         this.player = player;
         this.itemStack = itemStack;
@@ -66,7 +66,7 @@ public final class ItemClickEvent {
     }
 
     @SuppressWarnings("unchecked")
-    public <T extends InvifiInventory> T getInventory() {
+    public <T extends InvifyInventory> T getInventory() {
         return (T) inventory;
     }
 

@@ -1,13 +1,14 @@
 package net.Invify.inventory.api.item;
 
+import lombok.Getter;
 import net.Invify.inventory.api.event.ItemClickEvent;
 import org.bukkit.inventory.ItemStack;
 
+@Getter
 public abstract class CustomItem {
 
     // The ItemStack representing this custom item.
     private final ItemStack itemStack;
-    private boolean cancelClickEvent = true;
 
     protected CustomItem(ItemStack itemStack) {
         this.itemStack = itemStack;
@@ -23,15 +24,4 @@ public abstract class CustomItem {
         // Default implementation is empty, can be overridden by subclasses.
     }
 
-    public boolean isCancelClickEvent() {
-        return cancelClickEvent;
-    }
-
-    public void setCancelClickEvent(boolean cancelClickEvent) {
-        this.cancelClickEvent = cancelClickEvent;
-    }
-
-    public ItemStack getItemStack() {
-        return itemStack;
-    }
 }
