@@ -1,5 +1,7 @@
 package net.Invify.inventory.api.size;
 
+import lombok.Getter;
+
 /**
  * Enum representing different predefined inventory sizes.
  * Each size corresponds to a different number of slots and some may include specific colored border slots.
@@ -8,22 +10,23 @@ package net.Invify.inventory.api.size;
 public enum InvifyInventorySize {
 
     // Different inventory sizes with a name, total slot count, and specific border slots.
-    ONE_LINE("ONE_LINE", 9, new int[0]), // 9 slots (1 row)
-    TWO_LINE("TWO_LINE", 18, new int[0]), // 18 slots (2 rows)
-    THREE_LINE("THREE_LINE", 27, new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 18, 19, 20, 21, 22, 23, 24, 25, 26}), // 27 slots (3 rows)
-    FOUR_LINE("FOUR_LINE", 36, new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 27, 28, 29, 30, 31, 32, 33, 34, 35}), // 36 slots (4 rows)
-    FIVE_LINE("FIVE_LINE", 45, new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 36, 37, 38, 39, 40, 41, 42, 43, 44}), // 45 slots (5 rows)
-    SIX_LINE("SIX_LINE", 54, new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 45, 46, 47, 48, 49, 50, 51, 52, 53}); // 54 slots (6 rows)
+    ONE_LINE("ONE_LINE", 9),       // 9 slots (1 row)
+    TWO_LINE("TWO_LINE", 18),      // 18 slots (2 rows)
+    THREE_LINE("THREE_LINE", 27),  // 27 slots (3 rows)
+    FOUR_LINE("FOUR_LINE", 36),    // 36 slots (4 rows)
+    FIVE_LINE("FIVE_LINE", 45),    // 45 slots (5 rows)
+    SIX_LINE("SIX_LINE", 54);      // 54 slots (6 rows)
 
     // Name of the inventory size (e.g., "ONE_LINE", "TWO_LINE").
     private final String name;
 
     // Total number of slots for this inventory size.
+    @Getter
     private final int size;
 
     // An array representing the border slots that might be used for decoration or special purpose.
 
-    InvifyInventorySize(String name, int size, int[] coloredBorderSlots) {
+    InvifyInventorySize(String name, int size) {
         this.name = name;
         this.size = size;
 
@@ -66,7 +69,4 @@ public enum InvifyInventorySize {
         return null; // Return null if no matching size is found.
     }
 
-    public int getSize() {
-        return size;
-    }
 }

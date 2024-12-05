@@ -1,5 +1,6 @@
 package net.Invify.inventory;
 
+import lombok.Getter;
 import net.Invify.inventory.api.adventure.AdventureLegacyColorPostProcessor;
 import net.Invify.inventory.api.adventure.AdventureLegacyColorPreProcessor;
 import net.Invify.inventory.inventory.InvifyInventory;
@@ -19,17 +20,15 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+@Getter
 public final class InvifyAPI extends JavaPlugin {
 
+    @Getter
     public static InvifyAPI instance; // Singleton instance of the plugin
 
     private Map<InvifyInventory, Set<UUID>> openedInventories; // Maps inventories to the list of players that have them opened
 
     private MiniMessage minimessage; // Minimessage instance for handling text components
-
-    public static InvifyAPI getInstance() {
-        return instance;
-    }
 
     @Override
     public void onLoad() {
@@ -165,11 +164,4 @@ public final class InvifyAPI extends JavaPlugin {
         }
     }
 
-    public Map<InvifyInventory, Set<UUID>> getOpenedInventories() {
-        return openedInventories;
-    }
-
-    public MiniMessage getMinimessage() {
-        return minimessage;
-    }
 }

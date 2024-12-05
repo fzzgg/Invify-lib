@@ -1,5 +1,7 @@
 package net.Invify.inventory.inventory.type;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import net.Invify.inventory.api.item.CustomItem;
 import net.Invify.inventory.api.size.InvifyInventorySize;
 import net.Invify.inventory.inventory.InvifyInventory;
@@ -9,9 +11,9 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
+@Getter
+@RequiredArgsConstructor
 public abstract class SharedInventory extends InvifyInventory {
 
     // A set of all players who have this GUI open
@@ -19,18 +21,11 @@ public abstract class SharedInventory extends InvifyInventory {
     private final Inventory inventory;
 
     // An array of locks for synchronizing access to slots
-    private final Lock[] slotLocks;
 
     public SharedInventory(String displayName, InvifyInventorySize size) {
         super(size, displayName);
         this.openPlayers = new HashSet<>();
         this.inventory = this.getInventory();
-
-        // Creating an array of locks, one for each slot in the GUI
-        this.slotLocks = new Lock[size.getSize()];
-        for (int i = 0; i < size.getSize(); i++) {
-            this.slotLocks[i] = new ReentrantLock();
-        }
     }
 
     /**
@@ -99,17 +94,10 @@ public abstract class SharedInventory extends InvifyInventory {
      * @param slot   The slot from which the item will be taken.
      */
     public void takeItem(Player player, int slot) {
-        if (inventory.getItem(slot) != null) {
-            slotLocks[slot].lock();  // Lock the slot to prevent other players from accessing it simultaneously
-            try {
-                if (inventory.getItem(slot) != null) {
-                    inventory.clear(slot);  // Remove the item from the GUI
-                    syncInventoryForAllPlayers();  // Synchronize the changes for all players.
-                }
-            } finally {
-                slotLocks[slot].unlock();  // Release the lock, allowing other players to update the slot
+            if (inventory.getItem(slot) != null) {
+                inventory.clear(slot);  // Remove the item from the GUI
+                syncInventoryForAllPlayers();  // Synchronize the changes for all players.
             }
-        }
     }
 
     /**
@@ -119,6 +107,7 @@ public abstract class SharedInventory extends InvifyInventory {
      */
     @Override
     public void onInventoryClose(Player player) {
+        super.onInventoryClose(player);
         openPlayers.remove(player);  // Remove the player from the list of players who have opened the GUI.
     }
 
@@ -140,14 +129,6 @@ public abstract class SharedInventory extends InvifyInventory {
     @Override
     public CustomItem[] getItems() {
         return super.getItems();
-    }
-
-    public Lock[] getSlotLocks() {
-        return slotLocks;
-    }
-
-    public Set<Player> getOpenPlayers() {
-        return openPlayers;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package net.Invify.inventory.inventory;
 
+import lombok.Getter;
 import net.Invify.inventory.InvifyAPI;
 import net.Invify.inventory.api.info.InventoryInfo;
 import net.Invify.inventory.api.item.CustomItem;
@@ -13,6 +14,7 @@ import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.IntStream;
 
+@Getter
 public abstract class InvifyInventory {
 
     private final Inventory inventory;
@@ -27,7 +29,7 @@ public abstract class InvifyInventory {
     private CustomItem[] items;
 
     public InvifyInventory() {
-        InventoryInfo inventoryInfo = getClass().getAnnotation(InventoryInfo.class);
+        InventoryInfo inventoryInfo = getClass().getDeclaredAnnotation(InventoryInfo.class);
         if (inventoryInfo == null) {
             throw new IllegalArgumentException("Inventory \"" + getClass().getName() + "\" is not annotated with @InventoryInfo");
         }
@@ -52,7 +54,7 @@ public abstract class InvifyInventory {
         this.items = new CustomItem[invifyInventorySize.getSize()];
         this.invifyInventorySize = invifyInventorySize;
 
-        InventoryInfo inventoryInfo = getClass().getAnnotation(InventoryInfo.class);
+        InventoryInfo inventoryInfo = getClass().getDeclaredAnnotation(InventoryInfo.class);
         if (inventoryInfo != null) {
             this.cancelClickEvent = inventoryInfo.cancelClickEvent();
         } else {
@@ -149,18 +151,6 @@ public abstract class InvifyInventory {
     public boolean isViewing(Player player) {
         return InvifyAPI.getInstance().getOpenedInventories().computeIfAbsent(this, gui -> new HashSet<>())
                 .contains(player.getUniqueId());
-    }
-
-    public boolean isCancelClickEvent() {
-        return cancelClickEvent;
-    }
-
-    public CustomItem[] getItems() {
-        return items;
-    }
-
-    public Inventory getInventory() {
-        return inventory;
     }
 
     public InvifyInventorySize getInvifiInventorySize() {

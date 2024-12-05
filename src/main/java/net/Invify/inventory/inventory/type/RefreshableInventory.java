@@ -1,5 +1,6 @@
 package net.Invify.inventory.inventory.type;
 
+import lombok.Getter;
 import net.Invify.inventory.InvifyAPI;
 import net.Invify.inventory.api.item.CustomItem;
 import net.Invify.inventory.api.size.InvifyInventorySize;
@@ -10,6 +11,7 @@ import org.bukkit.scheduler.BukkitTask;
 
 import java.util.concurrent.TimeUnit;
 
+@Getter
 public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifyInventory {
 
     // The plugin instance that will be used to run tasks
@@ -83,21 +85,9 @@ public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifyIn
         if (updateTask != null) this.updateTask.cancel();
     }
 
-    public BukkitTask getUpdateTask() {
-        return updateTask;
-    }
-
     @Override
     public Inventory getInventory() {
         return super.getInventory();
-    }
-
-    public long getDelay() {
-        return delay;
-    }
-
-    public T getPlugin() {
-        return plugin;
     }
 
     @Override
@@ -113,10 +103,6 @@ public abstract class RefreshableInventory<T extends InvifyAPI> extends InvifyIn
     @Override
     public InvifyInventorySize getInvifiInventorySize() {
         return super.getInvifiInventorySize();
-    }
-
-    public void setUpdateTask(BukkitTask updateTask) {
-        this.updateTask = updateTask;
     }
 
     @Override
